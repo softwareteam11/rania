@@ -19,7 +19,7 @@ include_once ("Controller.php");
 				<a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
 			</div>
 			<ul id="navigation">
-				<li class="selected">
+				<li >
 					<a href="index.php">Home</a>
 				</li>
 				<li>
@@ -40,9 +40,34 @@ include_once ("Controller.php");
 		</div>
 <div id="contents">
 		<div id="adbox">
-			
+		<?php
+		$controll=controller::get_instance_controller();
+
+		$controll->get_diet();
+
+		$results = $controll->schedule();
+		
+		?>
+		<div class="pricing_table_wdg">
+		  
+			<?php
+			$i=1;
+			  while($row=  mysqli_fetch_assoc($results))
+            {
+				 
+            ?>
+            <ul>
+				<li><?php echo 'Day'.$i; ?></li>
+                <li><?php echo $row['day'.$i]; ?></li>
+                
+            </ul>
+			<?php
+			$i++;
+			}
+			 ?>
 		</div>
-		<div>
+		</div>
+		<div >
 <?php
 /*$servername = "localhost";
 $username = "root";
@@ -76,12 +101,19 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();*/
-$controll=controller::get_instance_controller();
+
+/***************************************************/
+/* $controll=controller::get_instance_controller();
 
 $controll->get_diet();
-?>  
+
+$controll->schedule(); */
+/***************************************************/
+//$controll->get_books_of_website();
+?>
+</div>  
 </div>
-		</div>
+		
 
 <!--<div class="sidebar">
 				
