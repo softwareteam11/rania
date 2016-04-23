@@ -34,8 +34,8 @@
 	</div>
 	<div id="contents">
 		<div id="adbox">
-			
 			<p>
+			<br>
 		Being active can give you that bikini-ready body you're dying to show off,
 		but that's not the only reason to exercise. Active involvement in sports and exercise provides 
 		you with benefits that go beyond the physical. You'll reap mental and emotional benefits with 
