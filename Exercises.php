@@ -21,7 +21,7 @@
 					<a href="about.php">About</a>
 				</li>
 				<li>
-					<a href="shop.php">Diets</a>
+					<a href="dietview.php">Diets</a>
 				</li>
 				<li class="selected">
 					<a href="Exercises.php">Exercises</a>
@@ -47,19 +47,19 @@
 	<div id="footer">
 					<ul>
 						<li>
-							<a href="index.html">Home</a>
+							<a href="index.php">Home</a>
 						</li>
 						<li>
-							<a href="about.html">About</a>
+							<a href="about.php">About</a>
 						</li>
 						<li>
-							<a href="shop.html">Diets</a>
+							<a href="dietview.php">Diets</a>
 						</li>
 						<li class="selected">
-							<a href="Exercises.html">Exercises</a>
+							<a href="Exercises.php">Exercises</a>
 						</li>
 						<li>
-							<a href="Sign.html">Sign In</a>
+							<a href="Sign.php">Sign In</a>
 						</li>
 					</ul>
 	</div>

@@ -21,7 +21,7 @@
 					<a href="about.php">About</a>
 				</li>
 				<li>
-					<a href="shop.php">Diets</a>
+					<a href="dietview.php">Diets</a>
 				</li>
 				<li>
 					<a href="Exercises.php">Exercises</a>
@@ -86,7 +86,7 @@
 							<a href="about.php">About</a>
 						</li>
 						<li>
-							<a href="shop.php">Diets</a>
+							<a href="dietview.php">Diets</a>
 						</li>
 						<li>
 							<a href="Exercises.php">Exercises</a>
