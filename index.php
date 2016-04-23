@@ -56,22 +56,22 @@
 		</div>
 		<div id="featured">
 			<ul>
-				<li>
-					<a href="Calculate weight.html"><img src="images/stare.png" alt="Img"></a>
+<li>
+					<a href="Calculate weight.php"><img src="images/stare.png" alt="Img"></a>
 					<p>
-						<a href="Calculate weight.html">Ideal weight calculator</a>   
+						<a href="Calculate weight.php">Ideal weight calculator</a>   
 					</p>
 				</li>
 				<li>
-					<a href="Body Shapes.html"><img src="images/whisper.png" alt="Img"></a>
+					<a href="Body Shapes.php"><img src="images/whisper.png" alt="Img"></a>
 					<p>
-						<a href="Body Shapes.html">Body shapes</a>          
+						<a href="Body Shapes.php">Body shapes</a>          
 					</p>
 				</li>
 				<li>
-					<a href="Food Benefits.html"><img src="images/enjoy.png" alt="Img"></a>
+					<a href="Food Benefits.php"><img src="images/enjoy.png" alt="Img"></a>
 					<p>
-						<a href="Food Benefits.html">Food benefits</a>                    
+						<a href="Food Benefits.php">Food benefits</a>                    
 					</p>
 				</li>
 			</ul>
@@ -80,19 +80,19 @@
 	<div id="footer">
 					<ul>
 						<li>
-							<a href="index.html">Home</a>
+							<a href="index.php">Home</a>
 						</li>
 						<li>
-							<a href="about.html">About</a>
+							<a href="about.php">About</a>
 						</li>
 						<li>
-							<a href="shop.html">Diets</a>
+							<a href="shop.php">Diets</a>
 						</li>
 						<li>
-							<a href="Exercises.html">Exercises</a>
+							<a href="Exercises.php">Exercises</a>
 						</li>
 						<li>
-							<a href="Sign.html">Sign In</a>
+							<a href="Sign.php">Sign In</a>
 						</li>
 					</ul>
 	</div>

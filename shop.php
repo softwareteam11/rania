@@ -25,7 +25,7 @@ include_once ("Controller.php");
 				<li>
 					<a href="about.php">About</a>
 				</li>
-				<li>
+				<li class="selected">
 					<a href="shop.php">Diets</a>
 				</li>
 				<li>

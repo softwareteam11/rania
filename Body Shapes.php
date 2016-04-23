@@ -1,10 +1,15 @@
+<?php
+include_once("dbmanager.php");
+include_once("Bodya.php");
+include_once ("Controller.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Easy Fit-Body Shapes</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="icon" href="C:\Users\menna lotfy\Desktop/imag.png" type="image/png"/>
+	<link rel="icon" href="imag.png" type="image/png"/>
 </head>
 <body>
 	<div id="header">
@@ -38,9 +43,17 @@
 		Know your body shape
 		</p>
 		</div>
-		</div>
-	
-	
+		<div >
+<?php
+
+$controll=controller::get_instance_controller();
+
+$controll->get_body();
+//$controll->get_books_of_website();
+?>
+</div>  
+</div>
+		<
 	<!----footer------------------>
 	<div id="footer">
 					<ul>
