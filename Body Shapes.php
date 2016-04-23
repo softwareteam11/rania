@@ -1,5 +1,5 @@
 <?php
-include_once("dbmanager.php");
+include_once("db.php");
 include_once("Bodya.php");
 include_once ("Controller.php");
 ?>
@@ -41,6 +41,9 @@ include_once ("Controller.php");
 		<div id="adbox">
 		<p>
 		Know your body shape
+		<?php 
+		$ii='photo/body-shapes-page.jpg';
+		echo "<img src='{$ii}'  alt='Mountain View' height='500' width='900'>"?>
 		</p>
 		</div>
 		<div >
@@ -48,8 +51,16 @@ include_once ("Controller.php");
 
 $controll=controller::get_instance_controller();
 
-$controll->get_body();
-//$controll->get_books_of_website();
+$d=$controll->get_body();
+ $ii=0; $arr;
+while($row=mysqli_fetch_array($d))
+{$ii = $row['image'];
+
+  echo "<br>"."<br>" . $row["type"]."<br>" ."<img src='{$ii}'  alt='Mountain View'>". $row["paragraph"]. "<br>";
+//echo "<img src='{$ii}'  alt='Mountain View'>";
+
+}
+
 ?>
 </div>  
 </div>
