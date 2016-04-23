@@ -1,5 +1,5 @@
 <?php
-include_once("dbmanager.php");
+include_once("db.php");
 include_once("diet.php");
 include_once ("Controller.php");
 ?>
@@ -43,7 +43,15 @@ include_once ("Controller.php");
 		<?php
 		$controll=controller::get_instance_controller();
 
-		$controll->get_diet();
+		$d=$controll->get_diet();
+		 $ii=0; $arr;
+            while($row=mysqli_fetch_array($d))
+            {
+              echo "<br>"."<br>" . $row["type"]."<br>" ."<br>" . $row["text"]. "<br>";
+           $ii = $row['iamge'];
+        echo "<img src='{$ii}'  alt='Mountain View'>";
+
+            }
 
 		$results = $controll->schedule();
 		

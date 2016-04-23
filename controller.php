@@ -19,9 +19,8 @@ class controller {
 	public function get_diet(){
 		/*$tracks=diet::get_instance_diet();*/
 	$d=new diet();
-	diet::show_diets();
-	//$d->dodo();
-		/*return $tracks_array ;*/
+	$results=diet::show_diets();
+	return $results;
 	}
 	
 	public function schedule(){

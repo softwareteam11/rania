@@ -22,17 +22,11 @@ class diet{
       $connect=$connectObject->getConnection();
       $sql= "SELECT  type, text ,iamge FROM dietplan";
       $results = mysqli_query($connect,$sql);
-      if(mysqli_query($connect, $sql))
+       if(mysqli_query($connect, $sql))
         {
             //echo "Records added successfully.";
-          $i=0; $arr;
-            while($row=mysqli_fetch_array($results))
-            {
-              echo "<br>"."<br>" . $row["type"]."<br>" ."<br>" . $row["text"]. "<br>";
-           $i = $row['iamge'];
-        echo "<img src='{$i}'  alt='Mountain View'>";
+         return $results;
 
-            }
         }
        else
        {
