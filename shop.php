@@ -32,7 +32,7 @@ include_once ("Controller.php");
 					<a href="Exercises.php">Exercises</a>
 				</li>
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="Sign.php">Sign In</a>
 				</li>
 			</ul>
 		</div>
