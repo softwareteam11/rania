@@ -11,7 +11,7 @@
 	<div id="header">
 		<div>
 			<div id="logo">
-				<a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+				<a href="index.php"><img src="images/logo.png" alt="LOGO"></a>
 			</div>
 			<form id="navigation">
 			<br>
