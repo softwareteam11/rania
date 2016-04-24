@@ -2,7 +2,9 @@
 //this is a singelton class 
 error_reporting(E_PARSE );
 require_once("diet.php");
+//require_once('Calculate weight.php');
 require_once('bodya.php');
+require_once('Person.php');
 
 class controller {
 	private static  $_instance=null;
@@ -38,6 +40,34 @@ class controller {
 	return $results;
 	//$d->dodo();
 		/*return $tracks_array ;*/
+	}
+	public function CalculateWeight ($var1,$var2,$var3)
+	{
+		switch ($var1) {
+    case "male":
+        $person=new male;
+        break;
+    case "female":
+        $person=new female;
+break;}
+
+switch ($var2) {
+    case 1:
+        $num=$person->CalculateByCMs($var3);
+		/*CalculateByInches($_POST['Height']);*/
+        // header("Location: Calculate weight.php?weight=".$num);
+        // exit;
+		//echo "<div class = 'number'> The ideal weight is {$num} </div>";
+		return $num;
+        break;
+    case 0:
+	$num=$person->CalculateByInches($var3);
+    // header("Location: Calculate weight.php?weight=".$num);
+    //     exit;
+//echo "<div class = 'number'> The ideal weight is {$num} </div>";
+	return $num;
+break;
+}
 	}
 	//public function CalculateWeight ($var)
  // 	{
