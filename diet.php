@@ -35,13 +35,13 @@ class diet{
 
         }
 		
-		public function diet_schedule(){
+		public function diet_schedule($id){
            
             $connectObject=Database::getInstance();
       $connect=$connectObject->getConnection();
-      $sql= "SELECT  name, day1 ,day2, day3, day4, day5, day6, day7 FROM schedule";
+      $sql= "SELECT  name, day1 ,day2, day3, day4, day5, day6, day7 FROM schedule where id=".$id;
       $results = mysqli_query($connect,$sql);
-      if(result)
+      if(mysqli_query($connect, $sql))
         {
 			return $results;
           /* $i=0; $arr;
