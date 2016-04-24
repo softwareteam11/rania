@@ -52,7 +52,7 @@ include_once ("Controller.php");
 			<p><?php echo "<p style='color:#9d6c53; font-weight: bold;'>"."<br>"."<br>" . $row["type"];?>
 			<p><?php echo "<br>" . $row["text"]."<br>"; ?></p>
 			<p><?php echo "<br>"."<br>";?>
-			<a style="text-align:right; color:#000000" href="new.php">Check diet schedule</a>
+			<a style="text-align:right; color:#000000" href="schedule.php">Check diet schedule</a>
 			<p><?php echo "<br>";?>
 			<img><?php
 				$ii = $row['iamge'];
