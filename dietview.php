@@ -44,25 +44,40 @@ include_once ("Controller.php");
 		$controll=controller::get_instance_controller();
 
 		$d=$controll->get_diet();
-		 $ii=0; $arr;
+		 $ii=0; $arr; $count=1;
             while($row=mysqli_fetch_array($d))
             {
 		?>
 		
 			<p><?php echo "<p style='color:#9d6c53; font-weight: bold;'>"."<br>"."<br>" . $row["type"];?>
 			<p><?php echo "<br>" . $row["text"]."<br>"; ?></p>
+			<?php
+			if($count==6)
+			{
+			?>
 			<p><?php echo "<br>"."<br>";?>
-			<a style="text-align:right; color:#000000" href="schedule.php">Check diet schedule</a>
-			<p><?php echo "<br>";?>
+			<a style="text-align:right; color:#000000" href="schedule1.php">Check chemical diet schedule</a>
+			<p><?php echo "<br>"; ?>
+			
+			<?php
+			}
+			if($count==7)
+			{
+			?>
+			<p><?php echo "<br>"."<br>";?>
+			<a style="text-align:right; color:#000000" href="schedule2.php">Check cabbage soup diet schedule</a>
+			<p><?php echo "<br>"; } ?>
+			
 			<img><?php
 				$ii = $row['iamge'];
 				echo "<img src='{$ii}'  alt='Mountain View'>";
 				?>
 			</img>
 		<?php
-			
+				$count++;
             }
 		?>
+		
 	</div>
 <div >
 <?php
