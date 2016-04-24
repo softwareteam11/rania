@@ -26,12 +26,11 @@ class controller {
 	return $results;
 	}
 	
-	public function schedule(){
+	public function schedule($id){
 	$d=new diet();
-	$results = diet::diet_schedule();
+	$results = diet::diet_schedule($id);
 	return $results;
 	}
-	
 	
 	public function get_body(){
 		/*$tracks=diet::get_instance_bodya();*/
