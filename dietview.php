@@ -39,43 +39,32 @@ include_once ("Controller.php");
 		
 		</div>
 <div id="contents">
-		<div id="adbox">
+	<div id="adbox">
 		<?php
 		$controll=controller::get_instance_controller();
 
 		$d=$controll->get_diet();
 		 $ii=0; $arr;
             while($row=mysqli_fetch_array($d))
-            { $ii = $row['iamge'];
-              echo "<br>"."<br>" . $row["type"]."<br>" ."<br>" . $row["text"]. "<br>";
-          
-        echo "<img src='{$ii}'  alt='Mountain View'>";
-
-            }
-
-		$results = $controll->schedule();
-		
-		?>
-		<div class="pricing_table_wdg">
-		  
-			<?php
-			$i=1;
-			  while($row=  mysqli_fetch_assoc($results))
             {
-				 
-            ?>
-            <ul>
-				<li><?php echo 'Day'.$i; ?></li>
-                <li><?php echo $row['day'.$i]; ?></li>
-                
-            </ul>
-			<?php
-			$i++;
-			}
-			 ?>
-		</div>
-		</div>
-		<div >
+		?>
+		
+			<p><?php echo "<p style='color:#9d6c53; font-weight: bold;'>"."<br>"."<br>" . $row["type"];?>
+			<p><?php echo "<br>" . $row["text"]."<br>"; ?></p>
+			<p><?php echo "<br>"."<br>";?>
+			<a style="text-align:right; color:#000000" href="new.php">Check diet schedule</a>
+			<p><?php echo "<br>";?>
+			<img><?php
+				$ii = $row['iamge'];
+				echo "<img src='{$ii}'  alt='Mountain View'>";
+				?>
+			</img>
+		<?php
+			
+            }
+		?>
+	</div>
+<div >
 <?php
 /*$servername = "localhost";
 $username = "root";
