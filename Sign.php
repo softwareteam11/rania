@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<!--3ayzeen n7ot sora fel title fe kol page-->
+<?php
+include_once ("Controller.php");   //de elly kanet 3amla moshkla 
+?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -13,7 +14,7 @@
 			<div id="logo">
 				<a href="index.php"><img src="images/logo.png" alt="LOGO"></a>
 			</div>
-			<form id="navigation">
+			<form id="navigation" action="Sign.php">
 			<br>
 			<br>
 			
@@ -21,34 +22,59 @@
   <input type="email" name="email" required> <br><br>
  
   Password 
-  <input type="password"  required>
+  <input type="password" name="password" required>
   <br><br>
   </div>
-  <input type="submit" value="Log In">
+  <input type="submit" name="sub1" value="Log In">
+ <?php
+
+/*$controll=controller::get_instance_controller();
+//session_start();
+if (isset($_POST[sub1]))
+{echo "hee";
+echo $_POST['email'];
+$m=$controll->login($_POST['email'],$_POST['password']);
+header("Location: index.php");*/
+//}
+
+
+  ?>
 			</form>
 		</div>
 	</div>
 	<div id="contents">
 	<div class="SignUpContainer">
-	<form>
+	<form action="Sign.php"  method="POST">
 		<!--<div id="adbox">-->
 			<p> Don't have an account,Create one </p>
- Name <input class ="Box" type="text"  required>
+ Name <input class ="Box" type="text"  name="name" required>
  <br>
  <br>
  E-mail <input class ="Box1" type="email" name="email" required>
  <br> <br>
- Password  <input class ="Box2" type="password"  required>
+ Password  <input class ="Box2" type="password"  name="password" required>
+ <!--a3mel repassord-->
  <br> <br>
- Weight <input class ="Box3" type="number"  required>
+ Re-Password  <input class ="Box3" type="password" name="re-password" required>
+ 
+ <br> <br>
+ Weight <input class ="Box3" type="number" name="weight" min="30" max="220" required>
  <br> <br>
 
  Gender:<br>
-  <input class="CheckBox" type="radio" name="gender" value="male" checked> Male<br>
+  <input class="CheckBox" type="radio" name="gender" value="male" required> Male<br>
   <input class="CheckBox"  type="radio" name="gender" value="female"> Female<br>
   <br> <br>   <br>
- <input class="SubmitBox" type="submit" value="Create an account">	
-			
+ <input class="SubmitBox" type="submit" name="sub" value="Create an account">	
+ <?php
+ session_start();
+ $controll=controller::get_instance_controller();
+
+if (isset($_POST[sub]))
+{
+$m=$controll->sign_up($_POST['name'],$_POST['email'],$_POST['password'],$_POST['weight'],$_POST['gender']);
+}
+?>	
 		<!--</div>-->
 		</form>
 		</div>
